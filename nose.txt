@@ -1,0 +1,15 @@
+import matplotlib.pyplot as plt
+import pandas as pd
+datos = pd.read_csv('ligamx.csv')
+
+valores= datos['Pg'].value_counts().sort_index()
+
+plt.bar(valores.index, valores.values)
+plt.xlabel('Eje x')
+plt.ylabel('Eje y')
+plt.title('Partidos ganados') 
+
+plt.show()
+                                        
+print(valores.index.tolist())
+print(valores.values.tolist())
